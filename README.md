@@ -49,5 +49,5 @@ Lastly we test our model with algorithms such as ResNet-50 model in Keras and VG
 
 
 
-Conclusion
+# **Conclusion**
 With my model i achieved an accuracy of 93.75% by using only one feature extraction, i.e the average brightness of the image. I could work more on this, for example features that involve Hue (a gradation or variety of a color spectrum) and Saturation channels could be extracted for more features which may resault in more accuracy. I also could make more epochs training instead of 5 to achieve more accuracy. Last but not least i can also implement more deep learning models to see different results.
