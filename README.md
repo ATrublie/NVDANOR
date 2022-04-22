@@ -10,13 +10,11 @@ Note: All images come from the AMOS dataset (Archive of Many Outdoor Scenes).
 Al the code can be found in NVDANOR.ipynb 
 
 
-Steps:
-
-1) First of all i am going to load the dataset and visualize it
+# **Steps 1:** First of all i am going to load the dataset and visualize it
 These first few lines of code will load the train folder and its subfolders day/night images and store all of them in a variable, IMAGE_LIST. This list contains the images and their associated label ("day" or "night").
 
 
-2) Step 2: Preprocess the data input images.
+# **Step 2:** Preprocess the data input images.
 This function takes in a list of image-label pairs and outputs a standardized list of resized images and numerical labels.
 
 Resizing every image to a standard size
@@ -24,7 +22,7 @@ Encode the target variables
 
 ![image](https://user-images.githubusercontent.com/83951228/164650214-8dc7158e-6d67-4a21-86b7-185bf32268ef.png)
 
-Step 3: Feature Extraction
+# **Step 3:** Feature Extraction
 I need to create a feature that represents the brightness in an image. For that i will be extracting the average brightness using HSV colorspace. Specifically, we'll use the V channel (a measure of brightness), add up the pixel values in the V channel, then divide that sum by the area of the image to get the average Value of the image.
 
 
@@ -33,12 +31,12 @@ I need to create a feature that represents the brightness in an image. For that 
 
 
 
-Step 4: Building the classifier
+# **Step 4:** Building the classifier
 Now we can us that average brightness feature and turn it into a classifier that takes in a standardized image and returns a predicted_label for that image. This estimate_label function should return a value: 0 or 1 (night or day, respectively).
 
 
 
-Step 5: We need to Evaluate our Classifier and Optimize it if possible
+# **Step 5:** We need to Evaluate our Classifier and Optimize it if possible
 Here is where we test our classification algorithm using our test set of data that we set aside at the beginning. Below, we load in the test dataset, standardize it using the standardize function we defined above, and then shuffle it. (Shuffling ensures that order will not play a role in testing accuracy).
 
 
